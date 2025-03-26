@@ -11,7 +11,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@types/express": "^5.0.1",
     "chalk": "^5.4.1",
+    "eventsource": "^3.0.5",
+    "express": "^4.21.2",
     "node-fetch": "^3.3.2",
     "prompt-sync": "^4.2.0"
   },

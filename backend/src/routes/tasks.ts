@@ -22,16 +22,26 @@ router.post("/", validateTask, (req, res) => {
     res.status(201).json(task);
 });
 
-router.put("/:id", (req, res) => {
+router.put("/", (req, res) => {
+    const newMovies: Movie[] = req.body;
+    if (!Array.isArray(newMovies)) {
+      res.status(400).json({ error: "El cuerpo debe ser un arreglo de películas." });
+      return;
+    }
+    tasks = newMovies;
+    res.status(200).json(tasks);
+  });
+  
+  router.put("/:id", (req, res) => {
     const task = tasks.find(t => t.id === parseInt(req.params.id));
     if (!task) {
-        res.status(404).json({ error: "Tarea no encontrada." });
-        return;
+      res.status(404).json({ error: "Tarea no encontrada." });
+      return;
     }
     task.watched = !task.watched;
     res.json(task);
-});
-
+  });
+  
 
 router.delete("/:id", (req, res) => {
     tasks = tasks.filter(t => t.id !== parseInt(req.params.id));

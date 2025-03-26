@@ -1,14 +1,26 @@
 [
   {
     "id": 1,
-    "title": "Interestellar",
-    "director": "Cristopher Nolan",
-    "watched": "No Vista"
+    "title": "Queens Gambit",
+    "director": "Clara del Claro",
+    "watched": true
   },
   {
     "id": 2,
-    "title": "Madagascar",
-    "director": "Timotee E. Brown",
-    "watched": "No Vista"
+    "title": "Interestellar",
+    "director": "Gumball H.",
+    "watched": false
+  },
+  {
+    "id": 3,
+    "title": "Space Jam",
+    "director": "Juliano Diaz",
+    "watched": false
+  },
+  {
+    "id": 4,
+    "title": "Avatar",
+    "director": "Cristopher Nolan",
+    "watched": false
   }
 ]
